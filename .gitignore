@@ -1,0 +1,11 @@
+# Terraform local cache and state files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+terraform.tfstate.backup
+*.backup
+crash.log
+# IDE settings
+.vscode/
+.idea/
