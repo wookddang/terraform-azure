@@ -19,8 +19,11 @@ jobs:
         with:
           terraform_version: 1.6.6
 
-      - name: Terraform Format Check
-        run: terraform fmt -check
+      # ✅ Azure 로그인 단계 추가
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Terraform Init
         run: terraform init
